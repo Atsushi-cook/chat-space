@@ -13,9 +13,7 @@ has_many :groups, through: :user_groups
 ## groopsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
-|text|text||
-|user_id|integer|null: false, foreign_key: true|
+|name|integer|null: false, foreign_key: true|
 ### Association
 has_many :user_groups
 has_many :users, through: :user_groups
@@ -24,6 +22,7 @@ has_many :messages
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
+|text|text|
 |image|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
