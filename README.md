@@ -17,7 +17,8 @@ has_many :groups, through: :user_groups
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
- belongs_to :user
+has_many :user_groups
+has_many :users, through: :user_groups
 has_many :comments
 
 ## messagesテーブル
@@ -27,7 +28,7 @@ has_many :comments
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-belongs_to :tweet
+belongs_to :group
 belongs_to :user
 
 ## user_groupsテーブル
@@ -37,7 +38,7 @@ belongs_to :user
 
 ### Association
 belongs_to :user
-belongs_to :group
+has_many :groups
 
 
 
