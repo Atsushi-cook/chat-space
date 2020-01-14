@@ -19,7 +19,7 @@ has_many :groups, through: :user_groups
 ### Association
 has_many :user_groups
 has_many :users, through: :user_groups
-has_many :comments
+has_many :messages
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -38,7 +38,7 @@ belongs_to :user
 
 ### Association
 belongs_to :user
-has_many :groups
+belongs_to :group
 
 
 
