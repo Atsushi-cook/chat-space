@@ -11,25 +11,25 @@
   height: 100vh;
   background-color: #253141;
 
-  .side-bar__user-name {
+  &__user-name {
     background-color: #253141;
     height: 100px;
     display: flex;
     justify-content: space-between;
     
-    &__logo {
-      text-align: left;
-      font-size: 16px;
-      color: white;
-      line-height: 90px;
-      padding-left: 15px;
-    }
+      &__logo {
+        text-align: left;
+        font-size: 16px;
+        color: white;
+        line-height: 90px;
+        padding-left: 15px;
+      }
 
-    .side-bar__user-name__custam {
+  &__custam {
       display: flex;
       justify-content: space-between;
       padding-top: 30px;
-    }
+  }
     .contents_btn {
       color: white;
       padding-right: 10px;
@@ -40,7 +40,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
 
-    .side-bar__second-mi {
+    &-mi {
       text-align: left;
       font-size: 15px;
       color: white;
@@ -48,20 +48,20 @@
       padding-left: 10px;
     }
     
-    .side-bar__second-ni {
+    &-ni {
       font-size: 11px;
       color: white;
       padding-top: 15px;
       padding-left: 10px;
     }
 
-    .side-bar__group {
-      text-align: left;
-      font-size: 15px;
-      color: white;
-      padding-top: 20px;
-      padding-left: 10px;
-    }
+  .side-bar__group {
+    text-align: left;
+    font-size: 15px;
+    color: white;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
 
     .side-bar__group-second {
       font-size: 11px;
@@ -69,7 +69,7 @@
       padding-top: 15px;
       padding-left: 10px;
     }
-}
+  }
 }
 
 .main-chat {
@@ -117,7 +117,7 @@
     width: calc(100vw - 300px);
     height: calc(100vh - 190px);
 
-    .main-chat__second-one {
+    &-one {
       display: inline-block; 
       height: 16px;
       font-size:16px;
@@ -127,7 +127,7 @@
       padding-left: 40px;
     }
 
-    .main-chat__second-two {
+    &-two {
       height: 12px;
       font-size:12px;
       width:300px;
@@ -139,7 +139,7 @@
       vertical-align: top;
     }
 
-    .main-chat__second-three {
+    &-three {
       font-size: 14px;
       color: #434A54;
       padding-left: 40px;
