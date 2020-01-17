@@ -1,11 +1,13 @@
 .side-bar
   .side-bar__user-name
-    .side-bar__user-name__logo
-      aaa
-    .side-bar__user-name__custam
+    %h3.side-bar__user-name__logo
+      = current_user.name
+    %ul.side-bar__user-name__custam
+      %li.list
       = link_to "#", class: "contents_btn" do
         = icon("fa", "fas fa-cog")
-      = link_to "#", class: "contents_btn" do
+      %li.list
+      = link_to edit_user_path(current_user), class: "contents_btn" do
         = icon("fa", "fas fa-edit")
   .side-bar__second
     .side-bar__second-mi
