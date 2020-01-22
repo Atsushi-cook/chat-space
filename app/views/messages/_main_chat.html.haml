@@ -1,26 +1,30 @@
 .main-chat
   .chat-main__group-info
     .chat-main__group-one
-      テスト
+      = @group.name
     .chat-main__group-two
-      Member : aaa
+      - @group.users.each do |user|
+        = user.name
     .chat-main__group-three
-      = link_to "#", class: "contents_btn" do
+      = link_to edit_group_path(@group) , class: "contents_btn" do
         Edit
   .main-chat__second
+    = render @messages
     .main-chat__second-one
       aaa
     .main-chat__second-two
       2020/1/16(Thur)7:30:00
     .main-chat__second-three
       おはよう！
+
   .chat-main__message-info
-    .chat-main__message-type
-      type a message
-      .chat-main__message-pic
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "aaa"}
-    .chat-main__message-send
-      = link_to "#", class: "contents_btn" do
-        Send
+    = form_for [@group, @message] do |f|
+      .chat-main__message-parent
+        = f.text_field :content, class: 'chat-main__message-type', placeholder: 'type a message' do
+          .chat-main__message-pic
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', 'class': 'icon')
+          = f.file_field :image, class: 'aaa'
+      .chat-main__message-send
+        = f.submit 'Send', class: 'contents_btn'
+    

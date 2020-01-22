@@ -10,11 +10,11 @@
       = link_to new_group_path(current_user), class: "contents_btn" do
         = icon("fa", "fas fa-edit")
   .side-bar__second
-    - current_user.groups.each do |second|
+    - current_user.groups.each do |group|
       .second
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .second__name
-            = second.name
+            = group.name
           .side-bar__group-second
-            まだメッセージがありません
+            = group.show_last_message
 
