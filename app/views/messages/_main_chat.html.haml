@@ -26,5 +26,5 @@
           = icon('fas', 'image', 'class': 'icon')
           = f.file_field :image, class: 'aaa'
       .chat-main__message-send
-        = f.submit 'Send', class: 'contents_btn'
+        = f.submit 'Send',"data-disable-with": "送信中...", id: 'chat-main__message-send', class: 'contents_btn'
     
