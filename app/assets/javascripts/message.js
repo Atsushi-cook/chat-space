@@ -54,7 +54,7 @@ $('#new_message').on('submit', function(e){
   .done(function(data){
     var html = buildHTML(data);
     $('.main-chat__second').append(html);
-    $('.main-chat__second').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+    $('.main-chat__second').animate({scrollTop: $('.main-chat__second')[0].scrollHeight},);
     $('form')[0].reset();
   })
   .fail(function() {
