@@ -10,12 +10,6 @@
         Edit
   .main-chat__second
     = render @messages
-    .main-chat__second-one
-      aaa
-    .main-chat__second-two
-      2020/1/16(Thur)7:30:00
-    .main-chat__second-three
-      おはよう！
 
   .chat-main__message-info
     = form_for [@group, @message] do |f|
@@ -26,5 +20,5 @@
           = icon('fas', 'image', 'class': 'icon')
           = f.file_field :image, class: 'aaa'
       .chat-main__message-send
-        = f.submit 'Send',"data-disable-with": "送信中...", id: 'chat-main__message-send', class: 'contents_btn'
+        = f.submit 'Send', class: 'contents_btn'
     

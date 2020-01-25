@@ -123,7 +123,7 @@
       overflow: scroll;
       padding-left: 30px;
   
-      &-one {
+      .upper-message__user-name {
         display: inline-block; 
         height: 16px;
         font-size:16px;
@@ -133,7 +133,7 @@
         padding-left: 10px;
       }
   
-      &-two {
+      .upper-message__date {
         height: 12px;
         font-size:12px;
         width:300px;
@@ -145,7 +145,7 @@
         vertical-align: top;
       }
   
-      &-three {
+      .lower-message {
         font-size: 14px;
         color: #434A54;
         padding-left: 10px;
