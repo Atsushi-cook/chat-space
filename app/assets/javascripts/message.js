@@ -112,7 +112,6 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
       alert(メッセージを送信してください)
     });
   };
