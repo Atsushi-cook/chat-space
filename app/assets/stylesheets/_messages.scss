@@ -157,7 +157,7 @@
       height: 90px;
       width: calc( 100vw - 300px );
       background-color: gray;
-      position:absolute;
+      position: relative;
       bottom:0;
   
       .chat-main__message-parent {
@@ -181,7 +181,7 @@
           left: 0px;
           padding-top: 15px;
           padding-left: 15px;
-          border: 1px solid gray
+          
         }
   
           
@@ -192,7 +192,7 @@
         }
           .input-box__image {
             position:absolute;
-            left: 280px;
+            left: 230px;
             display: inline-block
             
           }
